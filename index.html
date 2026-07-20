@@ -136,7 +136,24 @@ li {
   0 0 0 3px white,
   0 3px 10px rgba(0,0,0,0.15);
 
-  /*box-shadow: 0 3px 10px rgba(0,0,0,0.15);*/
+  animation: bounceBanner 3s infinite;
+}
+@keyframes bounceBanner {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+  }
+  10% {
+    transform: translateX(-50%) scale(1.05, 0.95);
+  }
+  20% {
+    transform: translateX(-50%) scale(0.97, 1.03);
+  }
+  30% {
+    transform: translateX(-50%) scale(1.02);
+  }
+  40% {
+    transform: translateX(-50%) scale(1);
+  }
 }
 
 .heat-alert {
