@@ -82,12 +82,13 @@ li {
 .footer {
   height: 160px;
   background: rgba(255,255,255,0.95);
+
   display: flex;
-  align-items: right;
-  justify-content: flex-end;
-  padding:5px 60px;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5px 30px;
   box-sizing: border-box;
-  gap: 30px
 }
 
 .footer-text {
@@ -105,6 +106,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translateY(-30px);
 }
 
 /* ===== 授業評価アンケート案内 ===== */
@@ -143,6 +145,43 @@ li {
     opacity: 0.6;
   }
 }
+
+.heat-alert {
+  flex: 1;
+  text-align: left;
+  transform: translateY(-30px);
+}
+
+.heat-alert span {
+  display: inline-block;
+  background: #d32f2f;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.footer-text {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: right;
+  transform: translateY(-30px);
+}
+
+.footer img {
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+}
+
 </style>
 
 </head>
@@ -166,12 +205,18 @@ li {
 
 <!-- フッター -->
 <div class="footer">
+  <div class="heat-alert">
+    <span>本日の熱中症警戒情報：危険</span>
+  </div>
+  
+  <div class="footer-right">
   <div class="footer-text">
-  <mark style="background-color: red">　 本日の熱中症警戒情報：危険 　</mark>　　　　　　　　　　詳細はこちらから➡</br>
+  詳細はこちらから➡<br>
   お気に入り登録（ブックマーク）してください
   </div>
   <div class="qr-box">
   <img src="image/qr.png" alt="QRコード">
+  </div>
   </div>
 </div>
 
