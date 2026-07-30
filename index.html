@@ -5,6 +5,7 @@
 <title>休講・補講情報</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ​
+
 <style>
 body {
   margin: 0;​
@@ -54,7 +55,7 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 24px;
   color: #ea580c;
   margin-top: 5px;
   margin-bottom: 8px;
@@ -81,7 +82,7 @@ li {
     column-count: 2;
     column-gap: 40px;
     column-fill: auto;
-    height: 100%;
+    height:  calc(100% - 20px);
 }
 
 .day-block{
@@ -229,7 +230,7 @@ color: #1565C0;
 </div>
 <div class="wrapper">
   <div class="panel makeup-panel">
-    <h1>７月３０日（木）　補 講</h1>
+    <h1>補　　　講</h1>
     <div id="makeup-container"></div>
   </div>
 </div>
@@ -309,9 +310,9 @@ function renderMakeup(grouped) {
     const block = document.createElement("div");
 block.className = "day-block";
 
-/*const h2 = document.createElement("h2");
+const h2 = document.createElement("h2");
 h2.textContent = formatJapaneseDate(date);
-block.appendChild(h2);*/
+block.appendChild(h2);
 
 const ul = document.createElement("ul");
 
